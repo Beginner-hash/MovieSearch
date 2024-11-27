@@ -9,19 +9,26 @@ export default function Menu() {
   const { data, error, isLoading } = useMovieQuery(debounceQuery);
 
   return (
-    <div className="flex h-svh items-center gap-16 md:flex-row flex-col my-5 overflow-y-hidden">
+    <div className="flex h-svh items-center gap-8 md:flex-row flex-col my-5 overflow-y-hidden">
       {" "}
-      <form className="flex flex-col justify-center items-center md:mt-0 mt-20">
+      <form className="flex flex-col justify-center items-center md:mt-0 mt-8">
         <Title>Wanna search for a movie?</Title>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered w-fsull max-w-sm block mt-10 w-2/4"
-          value={query || ""}
-          onChange={(e) => {
-            setQuery(e.target.value);
-          }}
-        />
+        <label className="w-fsull max-w-sm mt-5 md:mt-8 w-2/4">
+          <input
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-full"
+            value={query || ""}
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+          />
+          <div className="label">
+            <span className="label-text-alt">
+              Please type at least 3 caracters
+            </span>
+          </div>
+        </label>
       </form>
       <div className="grow overflow-scroll h-4/5 no-scrollbar grid md:grid-cols-3 sm:grid-cols-2 :grid-cols-1 gap-6 md:mb-0 mb-20">
         {error && data?.Search?.length ? <p>Error : {error.message}</p> : null}
