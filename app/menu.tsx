@@ -9,7 +9,7 @@ export default function Menu() {
   const { data, error, isLoading } = useMovieQuery(debounceQuery);
 
   return (
-    <div className="flex h-svh items-center gap-16 md:flex-row flex-col ">
+    <div className="flex h-svh items-center gap-16 md:flex-row flex-col my-5">
       {" "}
       <form className="flex flex-col justify-center items-center md:items-start md:mt-0 mt-20">
         <Title>Wanna search for a movie?</Title>
