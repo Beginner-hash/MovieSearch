@@ -27,7 +27,7 @@ export default function Menu() {
         {error ? <p>Error : {error.message}</p> : null}
         {isLoading ? <p>Loading ...</p> : null}
         {data?.Search?.length > 0
-          ? data?.Search.map((movie: any) => (
+          ? data?.Search.map((movie: { imdbID: string; Title: string }) => (
               <p key={movie.imdbID}>{movie.Title}</p>
             ))
           : null}
