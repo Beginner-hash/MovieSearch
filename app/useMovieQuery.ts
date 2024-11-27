@@ -8,7 +8,10 @@ export const useMovieQuery = (search: string) => {
 
     const customURL = new URL("http://www.omdbapi.com");
     customURL.searchParams.set("s", search);
-    customURL.searchParams.set("apiKey", process.env.OMDB_API_KEY ?? "");
+    customURL.searchParams.set(
+      "apiKey",
+      process.env.NEXT_PUBLIC_OMDB_API ?? ""
+    );
 
     const jsonResponse = await fetch(customURL.toString()).then((res) =>
       res.json()
