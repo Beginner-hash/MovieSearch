@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    OMDB_API_KEY: "f115a96e",
+  },
 };
 
 export default nextConfig;
