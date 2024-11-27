@@ -1,14 +1,14 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
-export const useApiKeyRequired = () => {
-  useEffect(() => {
-    let localStorageApikey = localStorage.getItem("omdbApiKey");
-    while (!localStorageApikey) {
-      const apiKey = prompt("Entrez la cle API");
-      localStorageApikey = apiKey;
-      if (apiKey) {
-        localStorage.setItem("omdbApiKey", apiKey);
-      }
-    }
-  }, []);
-};
+// export const useApiKeyRequired = () => {
+//   useEffect(() => {
+//     let localStorageApikey = localStorage.getItem("omdbApiKey");
+//     const apiKey = prompt(
+//       `Enter your API key or create one at \nhttps://www.omdbapi.com/apikey.aspx`
+//     );
+//     localStorageApikey = apiKey;
+//     if (apiKey) {
+//       localStorage.setItem("omdbApiKey", apiKey);
+//     }
+//   }, []);
+// };
