@@ -1,6 +1,6 @@
 ## Access this project live
 
-You can access this project live on vercel [MovieSearch](https://movie-search-topaz-one.vercel.app/)
+You can access this project live on this link : [MovieSearch](https://movie-search-topaz-one.vercel.app/)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
